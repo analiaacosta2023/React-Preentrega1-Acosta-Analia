@@ -1,0 +1,53 @@
+@import 'src/SassPartials';
+
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar {
+    @extend %flex-layout;
+    padding: $base-padding $base-padding * 2;
+    box-shadow: $base-box-shadow;
+
+    .site-logo {
+        width: 200px;
+        height: 100px;
+        transition: all 300ms;
+        cursor: pointer;
+
+        &:hover {
+            width: 210px;
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .container {
+        @extend %flex-layout;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+    li {
+        margin-left: $base-margin * 2;
+        font-weight: 600;
+        transition: all 300ms;
+        &:hover {
+            font-size: $base-font-size * 1.25;
+        }
+    }    
+    }
+    
+}
+
+@each $key,
+$val in $colors {
+    .navbar-#{$key} {
+        @extend .navbar;
+        background-color: $val;
+    }
+}

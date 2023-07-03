@@ -1,0 +1,22 @@
+// import partials
+// Importante el orden porque hay archivos que dependen de los anteriores
+
+
+// theme colors
+$primary: #FD90D4;
+$secondary: #297784;
+
+// variables & functions
+@import 'src/SassPartials/functions';
+@import 'src/SassPartials/variables';
+
+// base & layout
+@import 'src/SassPartials/base';
+@import 'src/SassPartials/breakpoints';
+@import 'src/SassPartials/grid';
+
+// colors
+@import 'src/SassPartials/colors';
+
+// utilities (margin, padding, opacity)
+@import'src/SassPartials/utilities';

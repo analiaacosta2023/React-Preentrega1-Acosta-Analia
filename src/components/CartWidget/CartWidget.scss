@@ -1,0 +1,44 @@
+@import 'src/SassPartials';
+
+@mixin cart-widget($bg-color: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+    p {
+        margin-left: $base-margin;
+    }
+  }
+  
+  .cart-widget {
+    @include cart-widget;
+  }
+  
+  @each $key, $val in $colors {
+    .cart-widget-#{$key} {
+      @include cart-widget($val);
+      &:hover {
+        background-color: lighten($val, 5);
+      }
+    }
+    .cart-widget-outlined-#{$key} {
+      @include cart-widget(#fff);
+      border: $base-border-thickness * 2 solid $val;
+      &:hover {
+        background-color: $val;
+      }
+    }
+    .cart-widget-complement-#{$key} {
+      @include cart-widget($val);
+      color: light-comp($val);
+      &:hover {
+        color: $val;
+        background-color: light-comp($val);
+      }
+    }
+  }
