@@ -1,0 +1,104 @@
+@import 'src/SassPartials';
+
+@mixin product-card($bg-color: #e2e2e2) {
+    width: 250px;
+    height: 350px;
+    padding: $base-padding $base-padding;
+    background-color: $bg-color;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+    box-shadow: $base-box-shadow;
+    transition: 0.2s ease;
+    position: relative;
+
+    &:hover {
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        border-radius: $base-border-radius * 0.75;
+    }
+
+    .des {
+        text-align: center;
+        padding: $base-padding 0;
+
+        span {
+            font-size: 12px;
+        }
+
+        h5 {
+            padding-top: $base-padding * 0.5;
+            font-size: 14px;
+        }
+
+        .star {
+            font-size: 12px;
+            color: rgb(243, 181, 25);
+        }
+
+        h4 {
+            padding-top: $base-padding * 0.5;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+
+    }
+
+    a {
+        padding: $base-padding $base-padding;
+        border-radius: 50px;
+        background-color: #fff;
+        position: absolute;
+        bottom: $base-padding;
+        right: $base-padding;
+    }
+}
+
+.product-card {
+    @include product-card;
+}
+
+@each $key,
+$val in $colors {
+    .product-card-#{$key} {
+        @include product-card($val);
+
+        a {
+            background-color: mix(#000, $val, 20%);
+
+            &:hover {
+                background-color: mix(#fff, $val, 20%);
+            }
+        }
+    }
+
+    .product-card-outlined-#{$key} {
+        @include product-card(#fff);
+        border: $base-border-thickness * 2 solid $val;
+
+        a {
+            background-color: mix(#fff, $val, 50%);
+            border: $base-border-thickness * 2 solid $val;
+
+            &:hover {
+                background-color: mix(#000, $val, 20%);
+            }
+        }
+    }
+
+    .product-card-complement-#{$key} {
+        @include product-card($val);
+        color: light-comp($val);
+
+        a {
+            background-color: mix(#000, $val, 20%);
+
+            &:hover {
+                color: $val;
+                background-color: complement($val);
+            }
+        }
+    }
+}

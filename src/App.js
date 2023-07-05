@@ -9,9 +9,9 @@ function App() {
       <header>
         <NavBar></NavBar>
       </header>
-      <body className='bg-primary-light-5'>
+      <div className='bg-primary-light-5' >
         <ItemListContainer greetings="Bienvenid@ a Ana Random Store">Tienda de zapatos de diseño</ItemListContainer>
-      </body>
+      </div>
     </div>
   );
 }
