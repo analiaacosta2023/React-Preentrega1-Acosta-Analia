@@ -46,7 +46,7 @@
 
     }
 
-    a {
+    .cart {
         padding: $base-padding $base-padding;
         border-radius: 50px;
         background-color: #fff;
@@ -65,7 +65,7 @@ $val in $colors {
     .product-card-#{$key} {
         @include product-card($val);
 
-        a {
+        .cart {
             background-color: mix(#000, $val, 20%);
 
             &:hover {
@@ -78,7 +78,7 @@ $val in $colors {
         @include product-card(#fff);
         border: $base-border-thickness * 2 solid $val;
 
-        a {
+        .cart {
             background-color: mix(#fff, $val, 50%);
             border: $base-border-thickness * 2 solid $val;
 
@@ -92,7 +92,7 @@ $val in $colors {
         @include product-card($val);
         color: light-comp($val);
 
-        a {
+        .cart {
             background-color: mix(#000, $val, 20%);
 
             &:hover {

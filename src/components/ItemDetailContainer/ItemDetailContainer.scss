@@ -1,0 +1,63 @@
+@import 'src/SassPartials';
+
+.single-product {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        min-width: 45%;
+    }
+
+    .single-pro-details {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        padding-top: $base-padding * 2;
+        justify-content: center;
+        align-items: center;
+
+        h6 {
+            font-size: $font-size-lg;
+            color: mix(#000, $primary, 30%);
+        }
+
+        h4 {
+            color: $secondary;
+            font-size: $font-size-xl;
+
+        }
+
+        h2 {
+            color: $secondary;
+            font-size: $font-size-xxl;
+            margin-bottom: $base-padding * 2;
+        }
+
+        .pro-description {
+            margin-top: $base-padding * 2;
+            justify-content: flex-start;
+
+            span {
+                font-size: $base-font-size;
+                padding-top: $base-padding;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: map-get($breakpoints, "md")) {
+
+    .single-product {
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+
+        .single-pro-details {
+            width: 100%;
+        }
+    }
+}

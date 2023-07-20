@@ -20,3 +20,7 @@ $secondary: #256a76;
 
 // utilities (margin, padding, opacity)
 @import'src/SassPartials/utilities';
+
+// components
+@import 'src/SassPartials/button';
+@import 'src/SassPartials/small-button';

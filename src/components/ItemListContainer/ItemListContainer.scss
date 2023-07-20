@@ -1,1 +1,18 @@
 @import 'src/SassPartials';
+
+.banner {
+    background-color: mix(#000, $primary, 30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $base-padding $base-padding;
+    border-radius: $base-border-radius;
+    margin-bottom: $base-padding;
+    h1 {
+        color: #fff;
+    }
+    h2 {
+        color: mix(#fff, $primary, 70%);
+    }
+}

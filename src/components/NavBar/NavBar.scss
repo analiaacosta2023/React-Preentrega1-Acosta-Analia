@@ -18,6 +18,7 @@
         height: 100px;
         border-radius: $base-border-radius;
         transition: all 300ms;
+        margin-bottom: $base-padding;
         cursor: pointer;
 
         &:hover {
@@ -30,12 +31,22 @@
         @extend %flex-layout;
     }
 
+    .nav-btn {
+        padding: $base-padding * 0.25;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        visibility: hidden;
+        opacity: 0;
+        font-size: $base-font-size * 2;
+    }
+
     .nav-menu {
         display: flex;
         align-items: center;
 
         li {
-            margin-left: $base-margin * 2;
             font-weight: 600;
             transition: all 300ms;
 
@@ -43,7 +54,7 @@
                 font-size: $base-font-size * 1.25;
             }
 
-            a {
+            a, p {
                 padding: $base-padding $base-padding * 2;
                 border-radius: $base-border-radius;
             }
@@ -52,15 +63,74 @@
 
 }
 
+@media (max-width: map-get($breakpoints, "lg")) {
+    .navbar {
+
+        .nav-btn {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5 rem;
+            transition: 1s;
+            transform: translateY(-100vh);
+            z-index: 2;
+
+            li {
+                margin-bottom: $base-margin * 2;
+
+                a,
+                p {
+                    font-size: $base-font-size * 2;
+                }
+            }
+        }
+
+        .responsive_nav {
+            transform: none
+        }
+
+        .nav-close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+}
+
 @each $key,
 $val in $colors {
     .navbar-#{$key} {
         @extend .navbar;
         background-color: $val;
 
-        li a:hover {
+        .nav-menu {
+            background-color: $val;
+        }
+
+        li {
+
+            a:hover,
+            a.active,
+            p:hover,
+            p.active {
+                background-color: mix(black, $val, 10%);
+            }
+        }
+
+
+        .nav-btn:hover {
             background-color: mix(black, $val, 10%);
-            ;
         }
     }
 }

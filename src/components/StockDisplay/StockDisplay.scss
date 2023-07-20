@@ -1,0 +1,18 @@
+@import 'src/SassPartials';
+
+.stock-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $base-padding $base-padding;
+
+    .buttons {
+        display: flex;
+        margin-bottom: $base-padding;
+
+        button {
+            padding: $base-padding;
+            margin: $base-margin * 0.3;
+        }
+    }
+}

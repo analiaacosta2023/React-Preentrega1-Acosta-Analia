@@ -1,0 +1,39 @@
+@mixin sm-btn($bg-color: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+  }
+  
+  .sm-btn {
+    @include sm-btn;
+  }
+  
+  @each $key, $val in $colors {
+    .sm-btn-#{$key} {
+      @include sm-btn($val);
+      &:hover {
+        background-color: lighten($val, 5);
+      }
+    }
+    .sm-btn-outlined-#{$key} {
+      @include sm-btn(#fff);
+      border: $base-border-thickness solid $val;
+      &:hover {
+        background-color: $val;
+      }
+    }
+    .sm-btn-complement-#{$key} {
+      @include sm-btn($val);
+      color: light-comp($val);
+      &:hover {
+        color: $val;
+        background-color: light-comp($val);
+      }
+    }
+  }

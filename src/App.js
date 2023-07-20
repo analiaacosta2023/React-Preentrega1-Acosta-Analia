@@ -1,18 +1,27 @@
-import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import CartView from './components/CartView/CartView';
+import NoMatch from './components/NoMatch/NoMatch';
 
 
 function App() {
   return (
-    <div>
-      <header>
+    <BrowserRouter>
+      <header className="bg-primary-light-5">
         <NavBar></NavBar>
       </header>
-      <div className='bg-primary-light-5' >
-        <ItemListContainer greetings="Bienvenid@ a Ana Random Store">Tienda de zapatos de diseño</ItemListContainer>
+      <div className='bg-primary-light-5'>
+        <Routes>
+          <Route path="/" element={<ItemListContainer ></ItemListContainer>} />
+          <Route path="/category/:coleccion" element={<ItemListContainer></ItemListContainer>} />
+          <Route path="/item/:productId" element={<ItemDetailContainer></ItemDetailContainer>} />
+          <Route path="/cart" element={<CartView/>} />
+          <Route path='*' element= {<NoMatch/>}/>
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
