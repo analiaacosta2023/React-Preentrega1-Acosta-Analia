@@ -10,13 +10,13 @@ function App() {
   return (
     <BrowserRouter>
       <header className="bg-primary-light-5">
-        <NavBar></NavBar>
+        <NavBar/>
       </header>
       <div className='bg-primary-light-5'>
         <Routes>
-          <Route path="/" element={<ItemListContainer ></ItemListContainer>} />
-          <Route path="/category/:coleccion" element={<ItemListContainer></ItemListContainer>} />
-          <Route path="/item/:productId" element={<ItemDetailContainer></ItemDetailContainer>} />
+          <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/category/:coleccion" element={<ItemListContainer/>} />
+          <Route path="/item/:productId" element={<ItemDetailContainer/>} />
           <Route path="/cart" element={<CartView/>} />
           <Route path='*' element= {<NoMatch/>}/>
         </Routes>

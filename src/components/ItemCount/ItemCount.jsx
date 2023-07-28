@@ -1,11 +1,15 @@
 import "./ItemCount.scss"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function ItemCount(props) {
 
     const { stockSelected } = props
     const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        setCount(0);
+      }, [stockSelected]);
 
     return (
         <div className="item-counter">

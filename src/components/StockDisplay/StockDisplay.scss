@@ -6,13 +6,27 @@
     align-items: center;
     padding: $base-padding $base-padding;
 
-    .buttons {
+    .size-selector {
         display: flex;
-        margin-bottom: $base-padding;
+        align-items: center;
+        padding: $base-padding;
 
-        button {
+        select {
+
             padding: $base-padding;
-            margin: $base-margin * 0.3;
+            margin-left: $base-margin;
+            background-color: #ffff;
+            border: $base-border-thickness * 2 solid $primary;
+            border-radius: $base-border-radius * 0.5;
+
+            cursor: pointer;
+
+            option {
+
+                padding: $base-padding;
+
+            }
         }
     }
+
 }

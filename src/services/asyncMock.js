@@ -1,7 +1,7 @@
 const productos = [
     {
         id: 1,
-        link_foto: "img/p1.jpeg",
+        link_foto: "../../img/p1.jpeg",
         nombre: "woman Clog 1",
         coleccion: "Flamingo",
         descripcion: "blablabla1",
@@ -11,7 +11,7 @@ const productos = [
     },
     {
         id: 2,
-        link_foto: "img/p2.jpeg",
+        link_foto: "../../img/p2.jpeg",
         nombre: "woman Clog 2",
         coleccion: "Orange",
         descripcion: "blablabla2",
@@ -21,7 +21,7 @@ const productos = [
     },
     {
         id: 3,
-        link_foto: "img/p3.jpeg",
+        link_foto: "../../img/p3.jpeg",
         nombre: "woman Clog 3",
         coleccion: "Flamingo",
         descripcion: "blablabla3",
@@ -31,7 +31,7 @@ const productos = [
     },
     {
         id: 4,
-        link_foto: "img/p4.jpeg",
+        link_foto: "../../img/p4.jpeg",
         nombre: "woman Clog 4",
         coleccion: "Watermelon",
         descripcion: "blablabla4",
@@ -41,7 +41,7 @@ const productos = [
     },
     {
         id: 5,
-        link_foto: "img/p5.jpeg",
+        link_foto: "../../img/p5.jpeg",
         nombre: "woman Clog 5",
         coleccion: "Flamingo",
         descripcion: "blablabla5",
@@ -51,7 +51,7 @@ const productos = [
     },
     {
         id: 6,
-        link_foto: "img/p6.jpeg",
+        link_foto: "../../img/p6.jpeg",
         nombre: "woman Clog 6",
         coleccion: "Crocodile",
         descripcion: "blablabla6",
@@ -61,7 +61,7 @@ const productos = [
     },
     {
         id: 7,
-        link_foto: "img/p7.jpeg",
+        link_foto: "../../img/p7.jpeg",
         nombre: "woman Clog 7",
         coleccion: "Dinosaur",
         descripcion: "blablabla7",
@@ -71,7 +71,7 @@ const productos = [
     },
     {
         id: 8,
-        link_foto: "img/p8.jpeg",
+        link_foto: "../../img/p8.jpeg",
         nombre: "woman Clog 8",
         coleccion: "Flamingo",
         descripcion: "blablabla8",
@@ -81,7 +81,7 @@ const productos = [
     },
     {
         id: 9,
-        link_foto: "img/p9.jpeg",
+        link_foto: "../../img/p9.jpeg",
         nombre: "woman Clog 9",
         coleccion: "Flamingo",
         descripcion: "blablabla9",
@@ -91,7 +91,7 @@ const productos = [
     },
     {
         id: 10,
-        link_foto: "img/p10.jpeg",
+        link_foto: "../../img/p10.jpeg",
         nombre: "woman Clog 10",
         coleccion: "Orange",
         descripcion: "blablabla10",
@@ -101,7 +101,7 @@ const productos = [
     },
     {
         id: 11,
-        link_foto: "img/p11.jpeg",
+        link_foto: "../../img/p11.jpeg",
         nombre: "woman Clog 11",
         coleccion: "Orange",
         descripcion: "blablabla11",
@@ -111,7 +111,7 @@ const productos = [
     },
     {
         id: 12,
-        link_foto: "img/p12.jpeg",
+        link_foto: "../../img/p12.jpeg",
         nombre: "woman Clog 12",
         coleccion: "Orange",
         descripcion: "blablabla12",
@@ -121,7 +121,7 @@ const productos = [
     },
     {
         id: 13,
-        link_foto: "img/p13.jpeg",
+        link_foto: "../../img/p13.jpeg",
         nombre: "woman Clog 13",
         coleccion: "Crocodile",
         descripcion: "blablabla13",
@@ -131,7 +131,7 @@ const productos = [
     },
     {
         id: 14,
-        link_foto: "img/p14.jpeg",
+        link_foto: "../../img/p14.jpeg",
         nombre: "woman Clog 14",
         coleccion: "Crocodile",
         descripcion: "blablabla14",
@@ -141,7 +141,7 @@ const productos = [
     },
     {
         id: 15,
-        link_foto: "img/p15.jpeg",
+        link_foto: "../../img/p15.jpeg",
         nombre: "woman Clog 15",
         coleccion: "Flamingo",
         descripcion: "blablabla15",
@@ -151,7 +151,7 @@ const productos = [
     },
     {
         id: 16,
-        link_foto: "img/p16.jpeg",
+        link_foto: "../../img/p16.jpeg",
         nombre: "woman Clog 16",
         coleccion: "Flamingo",
         descripcion: "blablabla16",
@@ -161,7 +161,7 @@ const productos = [
     },
     {
         id: 17,
-        link_foto: "img/p17.jpeg",
+        link_foto: "../../img/p17.jpeg",
         nombre: "woman Clog 17",
         coleccion: "Flamingo",
         descripcion: "blablabla17",
@@ -171,7 +171,7 @@ const productos = [
     },
     {
         id: 18,
-        link_foto: "img/p18.jpeg",
+        link_foto: "../../img/p18.jpeg",
         nombre: "woman Clog 18",
         coleccion: "Flamingo",
         descripcion: "blablabla18",
@@ -181,7 +181,7 @@ const productos = [
     },
     {
         id: 19,
-        link_foto: "img/p19.jpeg",
+        link_foto: "../../img/p19.jpeg",
         nombre: "woman Clog 19",
         coleccion: "Flamingo",
         descripcion: "blablabla19",
@@ -191,7 +191,7 @@ const productos = [
     },
     {
         id: 20,
-        link_foto: "img/p20.jpeg",
+        link_foto: "../../img/p20.jpeg",
         nombre: "woman Clog 20",
         coleccion: "Orange",
         descripcion: "blablabla20",
@@ -201,7 +201,7 @@ const productos = [
     },
     {
         id: 21,
-        link_foto: "img/p21.jpeg",
+        link_foto: "../../img/p21.jpeg",
         nombre: "woman Clog 21",
         coleccion: "Watermelon",
         descripcion: "blablabla21",
@@ -211,7 +211,7 @@ const productos = [
     },
     {
         id: 22,
-        link_foto: "img/p22.jpeg",
+        link_foto: "../../img/p22.jpeg",
         nombre: "woman Clog 22",
         coleccion: "Watermelon",
         descripcion: "blablabla22",
@@ -221,7 +221,7 @@ const productos = [
     },
     {
         id: 23,
-        link_foto: "img/p23.jpeg",
+        link_foto: "../../img/p23.jpeg",
         nombre: "woman Clog 23",
         coleccion: "Watermelon",
         descripcion: "blablabla23",
@@ -231,7 +231,7 @@ const productos = [
     },
     {
         id: 24,
-        link_foto: "img/p24.jpeg",
+        link_foto: "../../img/p24.jpeg",
         nombre: "woman Clog 24",
         coleccion: "Watermelon",
         descripcion: "blablabla24",
@@ -241,7 +241,7 @@ const productos = [
     },
     {
         id: 25,
-        link_foto: "img/p25.jpeg",
+        link_foto: "../../img/p25.jpeg",
         nombre: "woman Clog 25",
         coleccion: "Dinosaur",
         descripcion: "blablabla25",
@@ -251,7 +251,7 @@ const productos = [
     },
     {
         id: 26,
-        link_foto: "img/p26.jpeg",
+        link_foto: "../../img/p26.jpeg",
         nombre: "woman Clog 26",
         coleccion: "Dinosaur",
         descripcion: "blablabla26",
@@ -261,7 +261,7 @@ const productos = [
     },
     {
         id: 27,
-        link_foto: "img/p27.jpeg",
+        link_foto: "../../img/p27.jpeg",
         nombre: "woman Clog 27",
         coleccion: "Dinosaur",
         descripcion: "blablabla27",
@@ -271,7 +271,7 @@ const productos = [
     },
     {
         id: 28,
-        link_foto: "img/p4.jpeg",
+        link_foto: "../../img/p4.jpeg",
         nombre: "woman Clog 28",
         coleccion: "Watermelon",
         descripcion: "blablabla28",
@@ -281,7 +281,7 @@ const productos = [
     },
     {
         id: 29,
-        link_foto: "img/p29.jpeg",
+        link_foto: "../../img/p29.jpeg",
         nombre: "woman Clog 29",
         coleccion: "Crocodile",
         descripcion: "blablabla29",
@@ -291,7 +291,7 @@ const productos = [
     },
     {
         id: 30,
-        link_foto: "img/p30.jpeg",
+        link_foto: "../../img/p30.jpeg",
         nombre: "woman Clog 30",
         coleccion: "Crocodile",
         descripcion: "blablabla30",
@@ -301,7 +301,7 @@ const productos = [
     },
     {
         id: 31,
-        link_foto: "img/p31.jpeg",
+        link_foto: "../../img/p31.jpeg",
         nombre: "woman Clog 31",
         coleccion: "Crocodile",
         descripcion: "blablabla31",
@@ -311,7 +311,7 @@ const productos = [
     },
     {
         id: 32,
-        link_foto: "img/p32.jpeg",
+        link_foto: "../../img/p32.jpeg",
         nombre: "woman Clog 32",
         coleccion: "Orange",
         descripcion: "blablabla32",

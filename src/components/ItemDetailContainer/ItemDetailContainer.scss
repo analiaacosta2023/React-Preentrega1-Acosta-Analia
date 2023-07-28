@@ -2,10 +2,11 @@
 
 .single-product {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     img {
-        min-width: 45%;
+        width: 45%;
+        border-radius: $base-border-radius;
     }
 
     .single-pro-details {
