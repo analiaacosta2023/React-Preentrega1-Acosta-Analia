@@ -14,25 +14,46 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 $base-padding * 1.5;
   box-sizing: border-box;
+
 }
+
+.items-container {
+  min-height: calc(100vh - 360px);
+
+  @media (max-width: map-get($breakpoints, "xl")) {
+    min-height: calc(100vh - 468px);
+  }
+
+  @media (max-width: map-get($breakpoints, "md")) {
+    min-height: calc(100vh - 537px);
+  }
+}
+
 .row {
   display: flex;
   flex-flow: row wrap;
 }
 
 .grid-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 20px;
+
+  @media (max-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
 }
 
 // grid gaps
-@each $key, $val in $grid-gaps {
-  .gap-#{$key} > * {
+@each $key,
+$val in $grid-gaps {
+  .gap-#{$key}>* {
     padding: $val;
   }
+
   .gap-#{$key} {
     margin-left: -$val;
     margin-right: -$val;
@@ -48,11 +69,11 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // align items classes
 @each $val in $layout-values {
-  @if ($val != space-between and $val !=space-around){
-  .align-#{$val} {
-    align-items: $val;
+  @if ($val !=space-between and $val !=space-around) {
+    .align-#{$val} {
+      align-items: $val;
+    }
   }
-}  
 }
 
 // col classes
@@ -65,6 +86,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
+
 @include sm {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-sm {
@@ -74,6 +96,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
+
 @include md {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-md {
@@ -83,6 +106,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
+
 @include lg {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-lg {
@@ -92,6 +116,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
+
 @include xl {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xl {

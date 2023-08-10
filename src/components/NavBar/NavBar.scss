@@ -66,6 +66,7 @@
 @media (max-width: map-get($breakpoints, "lg")) {
     .navbar {
 
+        transition: 0.3;
         .nav-btn {
             visibility: visible;
             opacity: 1

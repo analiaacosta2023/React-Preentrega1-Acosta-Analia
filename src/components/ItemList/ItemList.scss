@@ -1,4 +1,23 @@
 @import 'src/SassPartials';
 
 
-  
+.pro-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $base-margin * 1.5;
+    margin: $base-margin * 1.5 0;
+
+    @media (max-width: map-get($breakpoints, "lg")) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: $base-margin;
+    }
+
+    @media (max-width: map-get($breakpoints, "md")) {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: map-get($breakpoints, "sm")) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

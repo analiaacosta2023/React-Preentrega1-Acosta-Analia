@@ -1,18 +1,37 @@
 @import 'src/SassPartials';
 
-.banner {
-    background-color: mix(#000, $primary, 30%);
+.loader {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.item-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: $base-padding $base-padding;
-    border-radius: $base-border-radius;
-    margin-bottom: $base-padding;
-    h1 {
-        color: #fff;
+
+    .banner {
+        width: 100%;
+        background-color: mix(#000, $primary, 30%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $base-padding 0;
+        border-radius: $base-border-radius;
+        margin-top: $base-margin * 1.5;
+
+        h1 {
+            color: #fff;
+        }
+
+        h2 {
+            color: mix(#fff, $primary, 70%);
+        }
     }
-    h2 {
-        color: mix(#fff, $primary, 70%);
+
+    button {
+        margin-bottom: $base-margin * 1.5;
+        font-size: $base-font-size * 1.5;
     }
 }

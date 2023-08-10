@@ -1,8 +1,6 @@
 @import 'src/SassPartials';
 
 @mixin product-card($bg-color: #e2e2e2) {
-    width: 250px;
-    height: 350px;
     padding: $base-padding $base-padding;
     background-color: $bg-color;
     border-radius: $base-border-radius;
@@ -16,6 +14,7 @@
     }
 
     img {
+        width: 100%;
         border-radius: $base-border-radius * 0.75;
     }
 
@@ -53,6 +52,18 @@
         position: absolute;
         bottom: $base-padding;
         right: $base-padding;
+    }
+
+   
+    @media (max-width: map-get($breakpoints, "sm")) {
+        display: flex;
+        img {
+            width: 50%;
+        }
+        .des {
+            width: 50%;
+        }
+
     }
 }
 

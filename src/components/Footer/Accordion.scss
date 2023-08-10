@@ -1,0 +1,68 @@
+@import 'src/SassPartials';
+
+.col {
+    margin-top: $base-margin * 1.5;
+
+    .titulo {
+        display: flex;
+        justify-content: space-between;
+
+        .icono {
+            display: none;
+            color: #fff;
+        }
+    }
+
+    .desplegable {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-height: 1000px;
+        transition: 0.5s ease;
+
+        .icon {
+            margin-top: $base-margin;
+
+            .icono {
+                color: black;
+                padding-right: $base-padding;
+                cursor: pointer;
+                font-size: $base-font-size;
+                color: mix(#000, $secondary, 70%);
+
+                &:hover {
+                    color: mix(#000, $primary, 20%);
+                    ;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($breakpoints, "md")) {
+    .col {
+        .titulo {
+            background-color: $secondary;
+            padding: $base-padding;
+            
+
+            h4 {
+                color: #fff;
+            }
+
+            .icono {
+                display: block;
+            }
+        }
+
+        .mobile-not-show {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.5s ease
+        }
+    }
+
+    .desplegable {
+        padding-left: $base-padding;
+    }
+}

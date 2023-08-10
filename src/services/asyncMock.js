@@ -7,7 +7,7 @@ const productos = [
         descripcion: "blablabla1",
         rating: 4,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0]
+        stock: [1, 0, 2, 5, 5, 8]
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const productos = [
         descripcion: "blablabla2",
         rating: 5,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 3, 5, 7, 1, 0],
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const productos = [
         descripcion: "blablabla3",
         rating: 3,
         precio: 99,
-        stock: [0, 5, 0, 0, 0, 0],
+        stock: [0, 5, 2, 7, 5, 0],
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const productos = [
         descripcion: "blablabla4",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 10, 1, 1, 1, 5],
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ const productos = [
         descripcion: "blablabla5",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [5, 4, 7, 8, 6, 0],
     },
     {
         id: 6,
@@ -57,7 +57,7 @@ const productos = [
         descripcion: "blablabla6",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 1, 1, 1, 1],
     },
     {
         id: 7,
@@ -67,7 +67,7 @@ const productos = [
         descripcion: "blablabla7",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [5, 4, 5, 7, 1, 2],
     },
     {
         id: 8,
@@ -77,7 +77,7 @@ const productos = [
         descripcion: "blablabla8",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [2, 2, 1, 0, 2, 0],
     },
     {
         id: 9,
@@ -87,7 +87,7 @@ const productos = [
         descripcion: "blablabla9",
         rating: 4,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0]
+        stock: [1, 1, 1, 1, 1, 0]
     },
     {
         id: 10,
@@ -97,7 +97,7 @@ const productos = [
         descripcion: "blablabla10",
         rating: 5,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 1, 2, 1, 1, 0],
     },
     {
         id: 11,
@@ -107,7 +107,7 @@ const productos = [
         descripcion: "blablabla11",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [2, 1, 4, 2, 2, 4],
     },
     {
         id: 12,
@@ -117,7 +117,7 @@ const productos = [
         descripcion: "blablabla12",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 1, 1, 1, 0],
     },
     {
         id: 13,
@@ -127,7 +127,7 @@ const productos = [
         descripcion: "blablabla13",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 4, 4, 1, 0],
     },
     {
         id: 14,
@@ -137,7 +137,7 @@ const productos = [
         descripcion: "blablabla14",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 1, 1, 1, 1, 0],
     },
     {
         id: 15,
@@ -147,7 +147,7 @@ const productos = [
         descripcion: "blablabla15",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 1, 1, 1, 0],
     },
     {
         id: 16,
@@ -157,7 +157,7 @@ const productos = [
         descripcion: "blablabla16",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [4, 1, 4, 4, 1, 1],
     },
     {
         id: 17,
@@ -167,7 +167,7 @@ const productos = [
         descripcion: "blablabla17",
         rating: 4,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0]
+        stock: [1, 1, 1, 1, 1, 0]
     },
     {
         id: 18,
@@ -177,7 +177,7 @@ const productos = [
         descripcion: "blablabla18",
         rating: 5,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 1, 1, 1, 1, 0],
     },
     {
         id: 19,
@@ -187,7 +187,7 @@ const productos = [
         descripcion: "blablabla19",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 1, 2, 1, 0],
     },
     {
         id: 20,
@@ -197,7 +197,7 @@ const productos = [
         descripcion: "blablabla20",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 2, 1, 1, 1],
     },
     {
         id: 21,
@@ -207,7 +207,7 @@ const productos = [
         descripcion: "blablabla21",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 1, 1, 1, 0],
     },
     {
         id: 22,
@@ -217,7 +217,7 @@ const productos = [
         descripcion: "blablabla22",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [2, 1, 2, 1, 0, 0],
     },
     {
         id: 23,
@@ -227,7 +227,7 @@ const productos = [
         descripcion: "blablabla23",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 1, 2, 3, 1, 0],
     },
     {
         id: 24,
@@ -237,7 +237,7 @@ const productos = [
         descripcion: "blablabla24",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 2, 1, 1, 0],
     },
     {
         id: 25,
@@ -247,7 +247,7 @@ const productos = [
         descripcion: "blablabla25",
         rating: 4,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0]
+        stock: [1, 1, 4, 2, 1, 0]
     },
     {
         id: 26,
@@ -257,7 +257,7 @@ const productos = [
         descripcion: "blablabla26",
         rating: 5,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 1, 4, 4, 1, 1],
     },
     {
         id: 27,
@@ -267,7 +267,7 @@ const productos = [
         descripcion: "blablabla27",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 1, 1, 1, 4, 0],
     },
     {
         id: 28,
@@ -277,7 +277,7 @@ const productos = [
         descripcion: "blablabla28",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [4, 4, 4, 1, 2, 0],
     },
     {
         id: 29,
@@ -287,7 +287,7 @@ const productos = [
         descripcion: "blablabla29",
         rating: 5,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [0, 2, 2, 2, 2, 0],
     },
     {
         id: 30,
@@ -297,7 +297,7 @@ const productos = [
         descripcion: "blablabla30",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 2, 1, 1, 1, 0],
     },
     {
         id: 31,
@@ -307,7 +307,7 @@ const productos = [
         descripcion: "blablabla31",
         rating: 3,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 1, 1, 1, 1, 0],
     },
     {
         id: 32,
@@ -317,7 +317,7 @@ const productos = [
         descripcion: "blablabla32",
         rating: 4,
         precio: 99,
-        stock: [0, 0, 0, 0, 0, 0],
+        stock: [1, 2, 2, 2, 1, 0],
     }
 ];
 

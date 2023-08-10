@@ -1,23 +1,55 @@
 @import 'src/SassPartials';
 
+.titulo {
+    display: flex;
+}
+
 .dropdown {
     position: absolute;
     top: 70px;
-    width: 400px;
+    max-height: 1000px;
     background-color: $primary;
-    border: $base-border-thickness * 2 solid mix(black, $primary, 10%);
-    border-radius: $base-border-radius;
-    padding: $base-padding $base-padding;
-    overflow: hidden;
     z-index: 3;
-    display: grid;
+    transition: 0.5 ease;
+
+    .contenido {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-gap: $base-margin;
+        padding: $base-padding;
+    }
 }
+
+.closed {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease;
+
+    }
+
+
 
 @media (max-width: map-get($breakpoints, "lg")) {
     .dropdown {
         position: relative;
-        top: 0;
-        width: 100%;
-        overflow: visible;
+        top: -20px;
+        max-height: 1000px;
+
+        .contenido {
+            display: flex;
+            flex-direction: column;
+          align-items: center;
+            justify-content: center;  
+            a {
+                font-size: $base-font-size * 1.25;
+            }
+        }
+        
+    }
+    .closed {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease;
+
     }
 }

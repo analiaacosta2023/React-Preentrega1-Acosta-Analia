@@ -1,10 +1,13 @@
 import "./ItemListContainer.scss";
 import ItemList from "../ItemList/ItemList";
 import getData, { getColeccionData } from "../../services/asyncMock"
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function ItemListContainer() {
+
+    const [isLoading, setIsLoading] = useState(true);
 
     const [title, setTitle] = useState();
     const [subtitle, setSubtitle] = useState()
@@ -12,7 +15,11 @@ function ItemListContainer() {
     const [products, setProducts] = useState([]);
 
     const { coleccion } = useParams()
+
+    const [visibleProducts, setVisibleProducts] = useState(8);
+
     useEffect(() => {
+        setIsLoading(true);
         async function requestProducts() {
             let respuesta = [];
 
@@ -26,21 +33,35 @@ function ItemListContainer() {
                 setSubtitle("Temporada 2023");
             }
             setProducts(respuesta);
+            setIsLoading(false);
         }
 
         requestProducts();
     }, [coleccion]);
 
+    const handleShowMore = () => {
+        setVisibleProducts(visibleProducts + 4);
+    };
 
-    return (
-        <div className="container bg-primary-light-8 p-2">
-            <div className="banner">
-                <h1>{title}</h1>
-                <h2>{subtitle}</h2>
+    if (isLoading) {
+        return (<div className="bg-primary-light-8 items-container loader">
+          <Loader  />  
+        </div>)
+    } else {
+
+        return (
+            <div className="container bg-primary-light-8 item-list items-container">
+                <div className="banner">
+                    <h1>{title}</h1>
+                    <h2>{subtitle}</h2>
+                </div>
+
+                <ItemList products={products.slice(0, visibleProducts)}></ItemList>
+                {visibleProducts < products.length && (<button className="btn-complement-primary" onClick={handleShowMore}>MOSTRAR MÁS</button>)}
             </div>
-            <ItemList products={products}></ItemList>
-        </div>
-    )
+        )
+    }
 }
+
 
 export default ItemListContainer

@@ -22,8 +22,10 @@
     .btn-outlined-#{$key} {
       @include btn(#fff);
       border: $base-border-thickness solid $val;
+      color: mix(black, $val, 50%);
       &:hover {
         background-color: $val;
+        color: mix(white, $val, 70%);
       }
     }
     .btn-complement-#{$key} {

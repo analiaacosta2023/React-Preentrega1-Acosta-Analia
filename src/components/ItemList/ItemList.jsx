@@ -10,7 +10,7 @@ function ItemList(props) {
     const productList = products.map(producto => <Item key={producto.id} producto={producto}></Item>)
 
     return (
-        <div className="grid-container">{productList}</div>
+        <div className="pro-container">{productList}</div>
     )
 }
 
