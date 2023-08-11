@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom'
 
 function CartView() {
 
-  const { cart, removeItem, getTotalPriceInCart } = useContext(cartContext);
+  const { cart, removeItem, getTotalPriceInCart, clearCart } = useContext(cartContext);
 
   return (
-    <div className="container bg-primary-light-8 p-2 items-container">
+    <div className="container bg-primary-light-9 p-2 items-container">
 
       <div className="banner-cart">
         <h1>Tu carrito</h1>
@@ -28,17 +28,21 @@ function CartView() {
         <div className='cart-container'>
 
           <div id='cart'>
-                          {cart.map((item) => (
-                <CartItem key={`${item.id}-${item.size}`} item={item} onConfirm={removeItem} />
-              ))}
-          </div>
+            {cart.map((item) => (
+              <CartItem key={`${item.id}-${item.size}`} item={item} onConfirm={removeItem} />
+            ))}
+            <div id="subtotal">
+              <h3>Total</h3>
+              <h3>$ {getTotalPriceInCart()}</h3>
 
-          <div id="subtotal">
-            <h3>Total</h3>
-            <h3>$ {getTotalPriceInCart()}</h3>
+            </div>
+          </div>
+          <div className='buttons'>
             <Link to='/checkout' className="btn-complement-primary">FINALIZAR COMPRA</Link>
             <Link to='/' className="btn-outlined-primary">SEGUIR COMPRANDO</Link>
+            <button className="btn-outlined-primary" onClick={clearCart}>LIMPIAR CARRITO</button>
           </div>
+
         </div>
 
       )}

@@ -6,21 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartView from './components/CartView/CartView';
 import NoMatch from './components/NoMatch/NoMatch';
 import Footer from './components/Footer/Footer';
-
-
-/* import { initializeApp } from "firebase/app";
-import { getFirestore } from "firabse/firestore";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAp66Onn5bKL9gp6RIazSwgq_oJRgQXq14",
-  authDomain: "react-ecommerce-7606d.firebaseapp.com",
-  projectId: "react-ecommerce-7606d",
-  storageBucket: "react-ecommerce-7606d.appspot.com",
-  messagingSenderId: "537587402818",
-  appId: "1:537587402818:web:9096a4024447c1388f85db"
-};
-
-const appFirebase = initializeApp(firebaseConfig); */
+import Checkout from './components/Checkout/Checkout';
+import OrderConfirm from './components/OrderConfirm/OrderConfirm';
 
 function App() {
   return (
@@ -35,6 +22,8 @@ function App() {
             <Route path="/category/:coleccion" element={<ItemListContainer />} />
             <Route path="/item/:productId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<CartView />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path='/order-confirmation/:id' element={<OrderConfirm />} />
             <Route path='/comingsoon' element={<NoMatch Title="Página en construcción">Próximamente</NoMatch>} />
             <Route path='*' element={<NoMatch Title="Página no encontrada">Error 404</NoMatch>} />
           </Routes>

@@ -73,4 +73,13 @@
         margin-top: $base-margin;
     }
 
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        border: $base-border-thickness solid mix(#000, $primary, 30%);
+        padding: $base-padding;
+        grid-gap: $base-margin;
+        margin-top: $base-margin;
+    }
+
 }

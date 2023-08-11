@@ -1,5 +1,12 @@
 @import 'src/SassPartials';
 
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .single-product {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -52,16 +59,13 @@
             font-size: $base-font-size;
             padding-top: $base-padding;
         }
-
-
     }
-
-    .home-btn {
-        grid-column: 1/5;
-        display: flex;
-        justify-content: center;
-    }
+  
 }
+
+.home-btn {
+        margin-top: $base-margin * 2;
+    }
 
 @media (max-width: map-get($breakpoints, "lg")) {
 

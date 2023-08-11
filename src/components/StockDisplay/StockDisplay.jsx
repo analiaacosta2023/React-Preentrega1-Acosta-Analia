@@ -48,19 +48,35 @@ function StockDisplay(props) {
 
     return (
         <div className='stock-display'>
-            {!isAddedToCart && (
-                <div className='size-selector'>
-                    <h6>Talle:</h6>
-                    <select value={size} onChange={e => setSize(e.target.value)}>
-                        <option value="" disabled>Seleccione talle</option>
-                        <option value={35} className='btn-outlined-primary'>35</option>
-                        <option value={36} className='btn-outlined-primary'>36</option>
-                        <option value={37} className='btn-outlined-primary'>37</option>
-                        <option value={38} className='btn-outlined-primary'>38</option>
-                        <option value={39} className='btn-outlined-primary'>39</option>
-                        <option value={40} className='btn-outlined-primary'>40</option>
-                    </select>
-                </div>
+            {!isAddedToCart ? (
+                <>
+                    <div className='size-selector'>
+                        <h6>Talle:</h6>
+                        <select value={size} onChange={e => setSize(e.target.value)}>
+                            <option value="" disabled>Seleccione talle</option>
+                            <option value={35} className='btn-outlined-primary'>35</option>
+                            <option value={36} className='btn-outlined-primary'>36</option>
+                            <option value={37} className='btn-outlined-primary'>37</option>
+                            <option value={38} className='btn-outlined-primary'>38</option>
+                            <option value={39} className='btn-outlined-primary'>39</option>
+                            <option value={40} className='btn-outlined-primary'>40</option>
+                        </select>
+                    </div>
+                    {size && (maxItems > 0 ?
+                        (
+                            <ItemCount stockSelected={maxItems} onConfirm={handleAddToCart} />
+                        ) : (
+                            <div>
+                                <p className='text-gray'>No hay stock disponible</p>
+                            </div>
+                        ))}
+                </>) : (<div>
+                <Link to="/cart" className='btn-complement-primary'>IR AL CARRITO</Link>
+                <button onClick={handleShopMore} className='btn-outlined-primary ml-1'>COMPRAR MÁS</button>
+            </div>
+            )}
+            {itemInCart && (
+                <p className='text-primary-dark-3'>Ya agregaste {itemInCart.count} de este producto en talle {itemInCart.size}</p>
             )}
 
             <ToastContainer
@@ -75,25 +91,6 @@ function StockDisplay(props) {
                 pauseOnHover
                 theme='light'
             />
-
-            {size && (maxItems > 0 ? (
-                isAddedToCart ? (
-                    <div>
-                        <Link to="/cart" className='btn-complement-primary'>IR AL CARRITO</Link>
-                        <button onClick={handleShopMore} className='btn-outlined-primary ml-1'>COMPRAR MÁS</button>
-                    </div>
-                ) : (
-                    <ItemCount stockSelected={maxItems} onConfirm={handleAddToCart} />
-                )) : (
-                <div>
-                    <p className='text-gray'>No hay stock disponible</p>
-                </div>
-
-
-            ))}
-            {itemInCart && (
-                <p className='text-primary-dark-3'>Ya agregaste {itemInCart.count} de este producto en talle {itemInCart.size}</p>
-            )}
         </div >
     )
 }

@@ -1,6 +1,6 @@
 import "./ItemListContainer.scss";
 import ItemList from "../ItemList/ItemList";
-import getData, { getColeccionData } from "../../services/asyncMock"
+import { getData, getColeccionData } from "../../services/firebase"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
@@ -45,19 +45,22 @@ function ItemListContainer() {
 
     if (isLoading) {
         return (<div className="bg-primary-light-8 items-container loader">
-          <Loader  />  
+            <Loader />
         </div>)
     } else {
-
         return (
-            <div className="container bg-primary-light-8 item-list items-container">
-                <div className="banner">
-                    <h1>{title}</h1>
-                    <h2>{subtitle}</h2>
-                </div>
+            <div className="container bg-primary-light-8 item-list items-container loader">
+                {products.length !== 0 ? (<>
+                    <div className="banner">
+                        <h1>{title}</h1>
+                        <h2>{subtitle}</h2>
+                    </div>
 
-                <ItemList products={products.slice(0, visibleProducts)}></ItemList>
-                {visibleProducts < products.length && (<button className="btn-complement-primary" onClick={handleShowMore}>MOSTRAR MÁS</button>)}
+                    <ItemList products={products.slice(0, visibleProducts)}></ItemList>
+                    {visibleProducts < products.length && (<button className="btn-complement-primary" onClick={handleShowMore}>MOSTRAR MÁS</button>)}
+                </>) : (
+                    <h2>No hay productos en la categoría especificada</h2>
+                )}
             </div>
         )
     }

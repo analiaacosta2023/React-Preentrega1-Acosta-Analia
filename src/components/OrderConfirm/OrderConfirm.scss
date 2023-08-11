@@ -1,0 +1,11 @@
+@import 'src/SassPartials';
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-btn {
+    margin-top: $base-margin * 2;
+}
