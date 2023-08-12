@@ -15,11 +15,15 @@ function ItemDetailContainer() {
   useEffect(() => {
     setIsLoading(true);
     async function requestProduct() {
-      let respuesta = [];
-      respuesta = await getProductData(productId);
-      setProducto(respuesta);
+      try {
+       let respuesta = await getProductData(productId);
+      setProducto(respuesta); 
+      } catch (error) {
+        setProducto(false); ;
+      } finally {
       setIsLoading(false);
     }
+  }
     requestProduct();
   }, [productId]);
 
@@ -59,7 +63,6 @@ function ItemDetailContainer() {
             VOLVER AL INICIO
           </Link>
         </div>
-
 
       </div>
     )

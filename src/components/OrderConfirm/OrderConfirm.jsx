@@ -3,6 +3,8 @@ import "./OrderConfirm.scss"
 import Loader from "../Loader/Loader";
 import { Link, useParams } from 'react-router-dom'
 import { getOrder } from "../../services/firebase";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function OrderConfirm() {
 
@@ -17,7 +19,7 @@ function OrderConfirm() {
             setIsLoading(false)
         })
             .catch((error) => {
-                console.error("Error fetching order:", error);
+                toast.error("Error fetching order:", error);
                 setIsLoading(false);
             });
     }, [id]);
@@ -36,32 +38,40 @@ function OrderConfirm() {
                 <h2>Gracias por tu compra</h2>
                 <h3>Tu código de orden es {id}</h3>
 
-                {orderData && orderData.items ? (
-
-
-                    <div id='products-list'>
-                        <p>Tus productos comprados:</p>
-                        <div>
-                            {orderData.items.map((item) => (
-                                <div key={`${item.id}-${item.size}`} className='item'>
-                                    <img src={item.link_foto} alt="" />
-                                    <div className='des'>
-                                        <h2>{item.nombre}</h2>
-                                        <h4>Talle: {item.size}</h4>
-                                        <h4>Cantidad: {item.count}</h4>
-                                    </div>
+                <div id='products-list'>
+                    <p>Tus productos comprados:</p>
+                    <div>
+                        {orderData.items.map((item) => (
+                            <div key={`${item.id}-${item.size}`} className='item'>
+                                <img src={item.link_foto} alt="" />
+                                <div className='des'>
+                                    <h2>{item.nombre}</h2>
+                                    <h4>Talle: {item.size}</h4>
+                                    <h4>Cantidad: {item.count}</h4>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
-                ) : (
-                    <p>No se encontraron productos en la orden.</p>
-                )}
+                </div>
+
                 <div className="home-btn">
                     <Link className='btn-outlined-primary' to="/">
                         VOLVER AL INICIO
                     </Link>
                 </div>
+
+                <ToastContainer
+                position='top-right'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme='light'
+            />
 
             </div>
         )

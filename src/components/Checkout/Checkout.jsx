@@ -7,7 +7,6 @@ import Loader from "../Loader/Loader";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 function Checkout() {
 
   const [isLoading, setIsLoading] = useState(false);
@@ -93,7 +92,7 @@ function Checkout() {
   function areFieldsEmpty(fields) {
     return Object.values(fields).some(value => value === "");
   }
-  
+
   const isBuyerFieldsEmpty = areFieldsEmpty(buyer);
   const isCardFieldsEmpty = areFieldsEmpty(card);
 
@@ -110,10 +109,36 @@ function Checkout() {
 
         <div className="banner">
           <h1>Finalizar compra</h1>
-          <h2>Completa tus datos para finalizar compra</h2>
         </div>
 
         <div className='checkout-container'>
+          <div className="banner">
+            <h2>1- Revisa tu compra</h2>
+          </div>
+
+          <div className='check bg-secondary-light-9'>
+
+            <div className='checkout1'>
+              {cart.map((item) => (
+                <div key={`${item.id}-${item.size}`} className='item'>
+                  <h4>{item.nombre}</h4>
+                  <h4>Precio: {item.precio}</h4>
+                  <h4>Talle: {item.size}</h4>
+                  <h4>Cantidad: {item.count}</h4>
+                </div>
+              ))}
+
+            </div>
+            <div id="subtotal">
+              <h3>Total</h3>
+              <h3>$ {getTotalPriceInCart()}</h3>
+            </div>
+          </div>
+
+          <div className="banner">
+            <h2>2- Completa tus datos</h2>
+          </div>
+
           <form className='bg-secondary-light-9'>
             <div className='checkout-form'>
 
@@ -197,17 +222,17 @@ function Checkout() {
 
         </div>
         <ToastContainer
-                position='top-right'
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme='light'
-            />
+          position='top-right'
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='light'
+        />
       </div>
     )
   }
