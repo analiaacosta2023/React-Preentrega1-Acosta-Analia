@@ -16,31 +16,43 @@ function OrderConfirm() {
             setOrderData(order);
             setIsLoading(false)
         })
-        .catch((error) => {
-            console.error("Error fetching order:", error);
-            setIsLoading(false);
-        });
-    }, []);
+            .catch((error) => {
+                console.error("Error fetching order:", error);
+                setIsLoading(false);
+            });
+    }, [id]);
 
     if (isLoading) {
-        return (<div className="bg-primary-light-8 items-container loader">
+        return (<div className="container bg-primary-light-8 items-container loader">
             <Loader />
         </div>)
     } else {
         return (
             <div className='container bg-primary-light-8 p-2 items-container loader'>
+
+                <div className="banner">
+                    <h1>Tu orden</h1>
+                </div>
                 <h2>Gracias por tu compra</h2>
                 <h3>Tu código de orden es {id}</h3>
-                
-                {orderData && orderData.items ? ( 
-                    <div>
-                    <p>Tus productos comprados:</p>
-                        {orderData.items.map((item) => (
-                            <small key={`${item.id}-${item.size}`}> 
-                                {item.nombre} - Talle: {item.size} - {item.count} unidades
-                            </small>
-                        ))}
-                    
+
+                {orderData && orderData.items ? (
+
+
+                    <div id='products-list'>
+                        <p>Tus productos comprados:</p>
+                        <div>
+                            {orderData.items.map((item) => (
+                                <div key={`${item.id}-${item.size}`} className='item'>
+                                    <img src={item.link_foto} alt="" />
+                                    <div className='des'>
+                                        <h2>{item.nombre}</h2>
+                                        <h4>Talle: {item.size}</h4>
+                                        <h4>Cantidad: {item.count}</h4>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 ) : (
                     <p>No se encontraron productos en la orden.</p>

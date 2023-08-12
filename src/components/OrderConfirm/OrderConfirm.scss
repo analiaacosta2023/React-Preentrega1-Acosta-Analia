@@ -9,3 +9,33 @@
 .home-btn {
     margin-top: $base-margin * 2;
 }
+
+
+#products-list {
+    padding: $base-padding;
+    border: $base-border-thickness solid mix(#000, $primary, 30%);
+    margin-top: $base-margin;
+
+    .item {
+        padding: $base-padding;
+        border: $base-border-thickness solid mix(#000, $primary, 30%);
+        margin-top: $base-margin;
+
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: $base-margin;
+        justify-items: center;
+
+        img {
+            grid-area: 1/1/2/2;
+            width: 100px;
+
+        }
+
+        .des {
+            grid-area: 1/2/2/4;
+            align-self: center;
+        }
+
+    }
+}

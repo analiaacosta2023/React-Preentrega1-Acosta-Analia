@@ -338,9 +338,9 @@ async function _exportProducts() {
         },
         {
             id: 28,
-            link_foto: "../../img/p4.jpeg",
+            link_foto: "../../img/p28.jpeg",
             nombre: "woman Clog 28",
-            coleccion: "watermelon",
+            coleccion: "dinosaur",
             descripcion: "blablabla28",
             rating: 3,
             precio: 99,

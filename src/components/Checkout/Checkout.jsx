@@ -99,7 +99,7 @@ function Checkout() {
 
 
   if (isLoading) {
-    return (<div className="bg-primary-light-8 items-container loader">
+    return (<div className="container bg-primary-light-8 items-container loader">
       <h2>Su orden se esta procesando</h2>
       <Loader />
     </div>)

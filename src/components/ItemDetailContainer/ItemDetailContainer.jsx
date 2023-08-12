@@ -24,7 +24,7 @@ function ItemDetailContainer() {
   }, [productId]);
 
   if (isLoading) {
-    return (<div className="bg-primary-light-8 items-container loader">
+    return (<div className="container bg-primary-light-8 items-container loader">
       <Loader />
     </div>)
   } else {
