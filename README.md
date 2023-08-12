@@ -8,8 +8,8 @@ Se programó un simulador de una tienda de suecos ficticia. Ninguno de los produ
 
 ### Sobre la alumna
 - Nombre: Analía Acosta
-- LinkedIn: [https://www.linkedin.com/in/analia-acosta-engineer/]
-- GitHub: [https://github.com/analiaacosta2023/]
+- [LinkedIn](https://www.linkedin.com/in/analia-acosta-engineer/)
+- [GitHub](https://github.com/analiaacosta2023/)
 
 ### Sobre el curso
 - React - Coderhouse
@@ -18,8 +18,8 @@ Se programó un simulador de una tienda de suecos ficticia. Ninguno de los produ
 - Tutor: Enzo Gustavo Agú
 
 ## Deploy
-Se puede visualizar e interactuar con la aplicación desde el siguiente link:
-[https://react43305-acosta-analia.vercel.app/]
+Se puede visualizar e interactuar con la aplicación desde el [link](https://react43305-acosta-analia.vercel.app/).
+
 
 ## Como correr el proyecto
 Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).
@@ -28,7 +28,7 @@ Este proyecto fue iniciado con [Create React App](https://github.com/facebook/cr
 ```bash
 npm start
 ```
-3. Abrir [http://localhost:3000] para visualizar en el navegador.
+3. Abrir http://localhost:3000 para visualizar en el navegador.
 
 ## Recorrido por la tienda
 
@@ -76,25 +76,17 @@ Cuando se completan todos los espacios del formulario, se puede visualizar *comp
 ### Confirmación de orden
 Presionando en *completar orden*, si la orden se procesa correctamente, se redirige hacia la **confirmación de la compra**.
 Se podrá ver el id de la orden de compra y el detalle de los productos comprados.
->Fin del recorrido.
+<div align="right">Fin del recorrido.</div>
 
 ## Librerías externas utilizadas
 
-- **Sass** para las hojas de estilo.
-[https://sass-lang.com/]
-[https://www.npmjs.com/package/sass]
+- **[Sass](https://www.npmjs.com/package/sass)** para las hojas de estilo.
 
-- **Fontawesome** para los íconos.
-[https://fontawesome.com/]
-[https://www.npmjs.com/package/@fortawesome/react-fontawesome]
+- **[Fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)** para los íconos.
 
-- **Material UI** para el loader
-[https://mui.com/material-ui/]
-[https://www.npmjs.com/package/@mui/material]
+- **[Material UI](https://www.npmjs.com/package/@mui/material)** para el loader
 
-- **Toastify** para las notificaciones
-[https://www.npmjs.com/package/react-toastify]
+- **[Toastify](https://www.npmjs.com/package/react-toastify)** para las notificaciones
 
 ## Base de datos
-Firestore de Firebase.
-[https://firebase.google.com/]
+Firestore de [Firebase](https://firebase.google.com/).
