@@ -7,15 +7,15 @@ Se programó un simulador de una tienda de suecos ficticia. Ninguno de los produ
 ## Datos generales:
 
 ### Sobre la alumna
-Nombre: Analía Acosta
-LinkedIn: [https://www.linkedin.com/in/analia-acosta-engineer/]
-GitHub: [https://github.com/analiaacosta2023/]
+- Nombre: Analía Acosta
+- LinkedIn: [https://www.linkedin.com/in/analia-acosta-engineer/]
+- GitHub: [https://github.com/analiaacosta2023/]
 
 ### Sobre el curso
-React - Coderhouse
-Comisión: 43305
-Profesor: Santiago Salkin
-Tutor: Enzo Gustavo Agú
+- React - Coderhouse
+- Comisión: 43305
+- Profesor: Santiago Salkin
+- Tutor: Enzo Gustavo Agú
 
 ## Deploy
 Se puede visualizar e interactuar con la aplicación desde el siguiente link:
