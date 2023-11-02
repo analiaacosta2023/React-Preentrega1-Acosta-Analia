@@ -1,6 +1,6 @@
 # E-commerce con React - Ana Random Store
 
-<img src="Screenshot 2023-11-02 at 11.19.56.png">
+<img src="github-img/Screenshot 2023-11-02 at 11.19.56.png">
 
 ## Introducción:
 Este trabajo se realizó como proyecto final del curso de React de Coderhouse.
@@ -21,7 +21,6 @@ Se programó un simulador de una tienda de suecos ficticia. Ninguno de los produ
 
 ## Deploy
 Se puede visualizar e interactuar con la aplicación desde el [link](https://react43305-acosta-analia.vercel.app/).
-
 
 ## Como correr el proyecto
 Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).
@@ -53,9 +52,13 @@ Se creó un pie de página a modo ilustrativo.
 ### Categorías
 Desde la barra de navegación, presionando en *productos*, se puede acceder a las distintas **categorías** de productos. Cada categoría corresponde a una colección de los distintos diseños.
 
+<img src="github-img/Screenshot 2023-11-02 at 11.24.35.png">
+
 ### Detalle de producto
 Presionando en la tarjeta de cualquier producto, se puede acceder a su **descripción**.
 Desde allí, se puede continuar con la compra o bien regresar desde el botón *Volver al inicio*.
+
+<img src="github-img/Screenshot 2023-11-02 at 11.25.08.png">
 
 #### Inicio de compra
 1. Seleccionar talle.
@@ -69,16 +72,22 @@ Se puede acceder al **carrito** desde la barra de navegación, o bien  desde *ir
 En caso de no existir productos cargados, se notificará y se podrá *ir a la tienda* nuevamente.
 Pero de existir productos en él, se podrá *seguir comprando*, *limpiar carrito*, borrar ítems o *finalizar compra*.
 
+<img src="github-img/Screenshot 2023-11-02 at 11.26.02.png">
+
 ### Checkout
 Presionando en *finalizar compra*, se redirigirá al **checkout**.
 Se podrá revisar la compra y luego cargar el formulario de datos.
 Cuando se completan todos los espacios del formulario, se puede visualizar *completar orden*.
 >Nota: En esta etapa del desarrollo del proyecto, no se verifican los datos ingresados, simplemente se chequea que esten todos completos.
 
+<img src="github-img/Screenshot 2023-11-02 at 11.27.12.png">
+
 ### Confirmación de orden
 Presionando en *completar orden*, si la orden se procesa correctamente, se redirige hacia la **confirmación de la compra**.
 Se podrá ver el id de la orden de compra y el detalle de los productos comprados.
 <div align="right">Fin del recorrido.</div>
+
+<img src="github-img/Screenshot 2023-11-02 at 11.27.22.png">
 
 ## Librerías externas utilizadas
 
