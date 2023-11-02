@@ -1,5 +1,7 @@
 # E-commerce con React - Ana Random Store
 
+<img src="Screenshot 2023-11-02 at 11.19.56.png">
+
 ## Introducción:
 Este trabajo se realizó como proyecto final del curso de React de Coderhouse.
 Se programó un simulador de una tienda de suecos ficticia. Ninguno de los productos existen, simplemente son imágenes creadas con inteligencia artificial.
